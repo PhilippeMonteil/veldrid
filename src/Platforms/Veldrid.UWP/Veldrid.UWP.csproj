@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20764290-8FE5-4B75-9F1C-C7191308ED0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Veldrid.UWP</RootNamespace>
+    <AssemblyName>Veldrid.UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;EXCLUDE_OPENGL_BACKEND;EXCLUDE_VULKAN_BACKEND;EXCLUDE_METAL_BACKEND</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;EXCLUDE_OPENGL_BACKEND;EXCLUDE_VULKAN_BACKEND;EXCLUDE_METAL_BACKEND</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Veldrid\BackendInfoD3D11.cs">
+      <Link>BackendInfoD3D11.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\BindableResource.cs">
+      <Link>BindableResource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\BlendAttachmentDescription.cs">
+      <Link>BlendAttachmentDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\BlendFactor.cs">
+      <Link>BlendFactor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\BlendFunction.cs">
+      <Link>BlendFunction.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\BlendStateDescription.cs">
+      <Link>BlendStateDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\BoundResourceSetInfo.cs">
+      <Link>BoundResourceSetInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\Buffer.cs">
+      <Link>Buffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\BufferDescription.cs">
+      <Link>BufferDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\BufferUsage.cs">
+      <Link>BufferUsage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\CommandList.cs">
+      <Link>CommandList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\CommandListDescription.cs">
+      <Link>CommandListDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ComparisonKind.cs">
+      <Link>ComparisonKind.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ComputePipelineDescription.cs">
+      <Link>ComputePipelineDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11DeviceOptions.cs">
+      <Link>D3D11DeviceOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11Buffer.cs">
+      <Link>D3D11\D3D11Buffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11CommandList.cs">
+      <Link>D3D11\D3D11CommandList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11Fence.cs">
+      <Link>D3D11\D3D11Fence.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11Formats.cs">
+      <Link>D3D11\D3D11Formats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11Framebuffer.cs">
+      <Link>D3D11\D3D11Framebuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11GraphicsDevice.cs">
+      <Link>D3D11\D3D11GraphicsDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11Pipeline.cs">
+      <Link>D3D11\D3D11Pipeline.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11ResourceCache.cs">
+      <Link>D3D11\D3D11ResourceCache.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11ResourceFactory.cs">
+      <Link>D3D11\D3D11ResourceFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11ResourceLayout.cs">
+      <Link>D3D11\D3D11ResourceLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11ResourceSet.cs">
+      <Link>D3D11\D3D11ResourceSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11Sampler.cs">
+      <Link>D3D11\D3D11Sampler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11Shader.cs">
+      <Link>D3D11\D3D11Shader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11Swapchain.cs">
+      <Link>D3D11\D3D11Swapchain.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11Texture.cs">
+      <Link>D3D11\D3D11Texture.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11TextureView.cs">
+      <Link>D3D11\D3D11TextureView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\D3D11\D3D11Util.cs">
+      <Link>D3D11\D3D11Util.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\DepthStencilStateDescription.cs">
+      <Link>DepthStencilStateDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\DeviceBufferRange.cs">
+      <Link>DeviceBufferRange.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\DeviceResource.cs">
+      <Link>DeviceResource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\FaceCullMode.cs">
+      <Link>FaceCullMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\Fence.cs">
+      <Link>Fence.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\FormatHelpers.cs">
+      <Link>FormatHelpers.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\Framebuffer.cs">
+      <Link>Framebuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\FramebufferAttachment.cs">
+      <Link>FramebufferAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\FramebufferAttachmentDescription.cs">
+      <Link>FramebufferAttachmentDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\FramebufferDescription.cs">
+      <Link>FramebufferDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\FrontFace.cs">
+      <Link>FrontFace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\GraphicsBackend.cs">
+      <Link>GraphicsBackend.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\GraphicsDevice.cs">
+      <Link>GraphicsDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\GraphicsDeviceFeatures.cs">
+      <Link>GraphicsDeviceFeatures.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\GraphicsDeviceOptions.cs">
+      <Link>GraphicsDeviceOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\GraphicsPipelineDescription.cs">
+      <Link>GraphicsPipelineDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\HashHelper.cs">
+      <Link>HashHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\IllegalValueException.cs">
+      <Link>IllegalValueException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\IndexFormat.cs">
+      <Link>IndexFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\IndirectDispatchArguments.cs">
+      <Link>IndirectDispatchArguments.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\IndirectDrawArguments.cs">
+      <Link>IndirectDrawArguments.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\IndirectDrawIndexedArguments.cs">
+      <Link>IndirectDrawIndexedArguments.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\MapMode.cs">
+      <Link>MapMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\MappableResource.cs">
+      <Link>MappableResource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\MappedResource.cs">
+      <Link>MappedResource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\MappedResourceCacheKey.cs">
+      <Link>MappedResourceCacheKey.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\MappedResourceInfo.cs">
+      <Link>MappedResourceInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\OutputAttachmentDescription.cs">
+      <Link>OutputAttachmentDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\OutputDescription.cs">
+      <Link>OutputDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\Pipeline.cs">
+      <Link>Pipeline.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\PixelFormat.cs">
+      <Link>PixelFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\PixelFormatProperties.cs">
+      <Link>PixelFormatProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\PolygonFillMode.cs">
+      <Link>PolygonFillMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\PrimitiveTopology.cs">
+      <Link>PrimitiveTopology.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\RasterizerStateDescription.cs">
+      <Link>RasterizerStateDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ResourceBindingModel.cs">
+      <Link>ResourceBindingModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ResourceFactory.cs">
+      <Link>ResourceFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ResourceKind.cs">
+      <Link>ResourceKind.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ResourceLayout.cs">
+      <Link>ResourceLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ResourceLayoutDescription.cs">
+      <Link>ResourceLayoutDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ResourceLayoutElementDescription.cs">
+      <Link>ResourceLayoutElementDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ResourceSet.cs">
+      <Link>ResourceSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ResourceSetDescription.cs">
+      <Link>ResourceSetDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\RgbaByte.cs">
+      <Link>RgbaByte.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\RgbaFloat.cs">
+      <Link>RgbaFloat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\Sampler.cs">
+      <Link>Sampler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\SamplerAddressMode.cs">
+      <Link>SamplerAddressMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\SamplerBorderColor.cs">
+      <Link>SamplerBorderColor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\SamplerDescription.cs">
+      <Link>SamplerDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\SamplerFilter.cs">
+      <Link>SamplerFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\Shader.cs">
+      <Link>Shader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ShaderConstantType.cs">
+      <Link>ShaderConstantType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ShaderDescription.cs">
+      <Link>ShaderDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ShaderSetDescription.cs">
+      <Link>ShaderSetDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ShaderStages.cs">
+      <Link>ShaderStages.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\SmallFixedOrDynamicArray.cs">
+      <Link>SmallFixedOrDynamicArray.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\SpecializationConstant.cs">
+      <Link>SpecializationConstant.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\StencilBehaviorDescription.cs">
+      <Link>StencilBehaviorDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\StencilOperation.cs">
+      <Link>StencilOperation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\Swapchain.cs">
+      <Link>Swapchain.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\SwapchainDescription.cs">
+      <Link>SwapchainDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\SwapchainSource.cs">
+      <Link>SwapchainSource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\Texture.cs">
+      <Link>Texture.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\TextureDescription.cs">
+      <Link>TextureDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\TextureSampleCount.cs">
+      <Link>TextureSampleCount.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\TextureType.cs">
+      <Link>TextureType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\TextureUsage.cs">
+      <Link>TextureUsage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\TextureView.cs">
+      <Link>TextureView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\TextureViewDescription.cs">
+      <Link>TextureViewDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\Util.cs">
+      <Link>Util.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\ValidationHelpers.cs">
+      <Link>ValidationHelpers.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\VdException.cs">
+      <Link>VdException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\VertexElementDescription.cs">
+      <Link>VertexElementDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\VertexElementFormat.cs">
+      <Link>VertexElementFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\VertexElementSemantic.cs">
+      <Link>VertexElementSemantic.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\VertexLayoutDescription.cs">
+      <Link>VertexLayoutDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Veldrid\Viewport.cs">
+      <Link>Viewport.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Veldrid.UWP.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="SharpDX">
+      <Version>4.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="SharpDX.D3DCompiler">
+      <Version>4.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="SharpDX.Direct3D11">
+      <Version>4.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="SharpDX.DXGI">
+      <Version>4.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Buffers">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Numerics.Vectors">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>4.4.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
