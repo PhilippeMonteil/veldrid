@@ -5,8 +5,8 @@
         private string _name;
         private bool _disposed;
 
-        public new BindableResource[] Resources { get; }
-        public new D3D11ResourceLayout Layout { get; }
+        public BindableResource[] Resources { get; }
+        public D3D11ResourceLayout Layout { get; }
 
         public D3D11ResourceSet(ref ResourceSetDescription description) : base(ref description)
         {
