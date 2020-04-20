@@ -14,11 +14,11 @@
     <PackageReference Include="Veldrid.SPIRV" Version="1.0.2" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(UseStableVersions)' == 'true'" >
+  <ItemGroup Condition="'$(UseStableVersions)' == 'true'">
     <PackageReference Include="Veldrid" Version="4.5.0" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(UseStableVersions)' != 'true'" >
+  <ItemGroup Condition="'$(UseStableVersions)' != 'true'">
     <ProjectReference Include="..\Veldrid\Veldrid.csproj" />
   </ItemGroup>
 
@@ -29,6 +29,13 @@
       <PackagePath>runtimes/win-x64/native</PackagePath>
       <Pack>true</Pack>
     </Content>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="vk">
+      <HintPath>..\..\bin\Debug\Veldrid\netstandard2.0\vk.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <PropertyGroup>

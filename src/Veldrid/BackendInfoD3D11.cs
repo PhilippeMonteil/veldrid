@@ -6,7 +6,7 @@ namespace Veldrid
 {
     /// <summary>
     /// Exposes Direct3D 11-specific functionality, useful for interoperating with native components which interface directly with
-    /// Direct3D 11. Can only be used on a GraphicsDevice whose GraphicsBackend is D3D11.
+    /// Direct3D 11. Can only be used on a GraphicsDevice whose GraphicsBackend is D3D11. 1.000
     /// </summary>
     public class BackendInfoD3D11
     {

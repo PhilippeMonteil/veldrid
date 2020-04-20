@@ -24,8 +24,6 @@
     <PackageReference Include="SharpDX.Direct3D11" Version="4.0.1" Condition="'$(ExcludeD3D11)' != 'true'" />
     <PackageReference Include="SharpDX.DXGI" Version="4.0.1" Condition="'$(ExcludeD3D11)' != 'true'" />
 
-    <PackageReference Include="Vk" Version="1.0.22" Condition="'$(ExcludeVulkan)' != 'true'" />
-
     <ProjectReference Include="..\Veldrid.MetalBindings\Veldrid.MetalBindings.csproj" Condition="'$(ExcludeMetal)' != 'true'" />
 
     <ProjectReference Include="..\Veldrid.OpenGLBindings\Veldrid.OpenGLBindings.csproj" Condition="'$(ExcludeOpenGL)' != 'true'" />
@@ -45,6 +43,12 @@
     <EmbeddedResource Include="MTL/EmbeddedShaders/MTL_UnalignedBufferCopy_iOS.metallib">
       <LogicalName>MTL_UnalignedBufferCopy_iOS</LogicalName>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="vk">
+      <HintPath>..\..\..\vk\bin\Debug\vk\netstandard1.4\vk.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <PropertyGroup>
