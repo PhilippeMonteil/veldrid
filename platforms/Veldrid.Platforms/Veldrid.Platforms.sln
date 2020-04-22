@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veldrid.iOS", "Veldrid.iOS\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veldrid.Android", "Veldrid.Android\Veldrid.Android.csproj", "{F68E83B9-3CD0-447C-81AE-D66E92352043}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{5FCBCE72-0045-43D0-993E-32608286C05A}"
+	ProjectSection(SolutionItems) = preProject
+		NUGet\generate.bat = NUGet\generate.bat
+		NUGet\Veldrid.Platforms\Veldrid.Platforms.nuspec = NUGet\Veldrid.Platforms\Veldrid.Platforms.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
