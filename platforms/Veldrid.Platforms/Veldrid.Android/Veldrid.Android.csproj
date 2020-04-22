@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F68E83B9-3CD0-447C-81AE-D66E92352043}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{9ef11e43-1701-4396-8835-8392d57abb70}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Veldrid.Android</RootNamespace>
+    <AssemblyName>Veldrid.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>True</Deterministic>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EXCLUDE_D3D11_BACKEND;EXCLUDE_METAL_BACKEND</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;EXCLUDE_D3D11_BACKEND;EXCLUDE_METAL_BACKEND</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\src\Veldrid\Android\AndroidRuntime.cs">
+      <Link>Android\AndroidRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\EAGL\CAEAGLLayer.cs">
+      <Link>OpenGL\EAGL\CAEAGLLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\EAGL\EAGLContext.cs">
+      <Link>OpenGL\EAGL\EAGLContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\EGL\EGLNative.cs">
+      <Link>OpenGL\EGL\EGLNative.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\BeginEntry.cs">
+      <Link>OpenGL\ManagedEntryList\BeginEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\ClearColorTargetEntry.cs">
+      <Link>OpenGL\ManagedEntryList\ClearColorTargetEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\ClearDepthTargetEntry.cs">
+      <Link>OpenGL\ManagedEntryList\ClearDepthTargetEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\DispatchEntry.cs">
+      <Link>OpenGL\ManagedEntryList\DispatchEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\DispatchIndirectEntry.cs">
+      <Link>OpenGL\ManagedEntryList\DispatchIndirectEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\DrawEntry.cs">
+      <Link>OpenGL\ManagedEntryList\DrawEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\DrawIndexedEntry.cs">
+      <Link>OpenGL\ManagedEntryList\DrawIndexedEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\DrawIndexedIndirectEntry.cs">
+      <Link>OpenGL\ManagedEntryList\DrawIndexedIndirectEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\DrawIndirectEntry.cs">
+      <Link>OpenGL\ManagedEntryList\DrawIndirectEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\EndEntry.cs">
+      <Link>OpenGL\ManagedEntryList\EndEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\OpenGLCommandEntry.cs">
+      <Link>OpenGL\ManagedEntryList\OpenGLCommandEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\OpenGLManagedCommandEntryList.cs">
+      <Link>OpenGL\ManagedEntryList\OpenGLManagedCommandEntryList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\OpenGLPooledCommandEntryList.cs">
+      <Link>OpenGL\ManagedEntryList\OpenGLPooledCommandEntryList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\ResolveTextureEntry.cs">
+      <Link>OpenGL\ManagedEntryList\ResolveTextureEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\SetComputeResourceSetEntry.cs">
+      <Link>OpenGL\ManagedEntryList\SetComputeResourceSetEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\SetFramebufferEntry.cs">
+      <Link>OpenGL\ManagedEntryList\SetFramebufferEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\SetGraphicsResourceSetEntry.cs">
+      <Link>OpenGL\ManagedEntryList\SetGraphicsResourceSetEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\SetIndexBufferEntry.cs">
+      <Link>OpenGL\ManagedEntryList\SetIndexBufferEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\SetPipelineEntry.cs">
+      <Link>OpenGL\ManagedEntryList\SetPipelineEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\SetScissorRectEntry.cs">
+      <Link>OpenGL\ManagedEntryList\SetScissorRectEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\SetVertexBufferEntry.cs">
+      <Link>OpenGL\ManagedEntryList\SetVertexBufferEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\SetViewportEntry.cs">
+      <Link>OpenGL\ManagedEntryList\SetViewportEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\ManagedEntryList\UpdateBufferEntry.cs">
+      <Link>OpenGL\ManagedEntryList\UpdateBufferEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocBeginEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocBeginEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocClearColorTargetEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocClearColorTargetEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocClearDepthTargetEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocClearDepthTargetEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocCopyBufferEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocCopyBufferEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocCopyTextureEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocCopyTextureEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocDispatchEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocDispatchEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocDispatchIndirectEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocDispatchIndirectEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocDrawEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocDrawEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocDrawIndexedEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocDrawIndexedEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocDrawIndexedIndirectEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocDrawIndexedIndirectEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocDrawIndirectEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocDrawIndirectEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocEndEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocEndEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocGenerateMipmapsEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocGenerateMipmapsEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocInsertDebugMarkerEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocInsertDebugMarkerEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocPopDebugGroupEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocPopDebugGroupEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocPushDebugGroupEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocPushDebugGroupEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocResolveTextureEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocResolveTextureEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocSetFramebufferEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocSetFramebufferEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocSetGraphicsResourceSetEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocSetGraphicsResourceSetEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocSetIndexBufferEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocSetIndexBufferEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocSetPipelineEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocSetPipelineEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocSetScissorRectEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocSetScissorRectEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocSetVertexBufferEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocSetVertexBufferEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocSetViewportEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocSetViewportEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\NoAllocUpdateBufferEntry.cs">
+      <Link>OpenGL\NoAllocEntryList\NoAllocUpdateBufferEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\NoAllocEntryList\OpenGLNoAllocCommandEntryList.cs">
+      <Link>OpenGL\NoAllocEntryList\OpenGLNoAllocCommandEntryList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLBuffer.cs">
+      <Link>OpenGL\OpenGLBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLCommandEntryList.cs">
+      <Link>OpenGL\OpenGLCommandEntryList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLCommandExecutor.cs">
+      <Link>OpenGL\OpenGLCommandExecutor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLCommandList.cs">
+      <Link>OpenGL\OpenGLCommandList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLDeferredResource.cs">
+      <Link>OpenGL\OpenGLDeferredResource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLExtensions.cs">
+      <Link>OpenGL\OpenGLExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLFence.cs">
+      <Link>OpenGL\OpenGLFence.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLFormats.cs">
+      <Link>OpenGL\OpenGLFormats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLFramebuffer.cs">
+      <Link>OpenGL\OpenGLFramebuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLGraphicsDevice.cs">
+      <Link>OpenGL\OpenGLGraphicsDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLPipeline.cs">
+      <Link>OpenGL\OpenGLPipeline.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLPlaceholderTexture.cs">
+      <Link>OpenGL\OpenGLPlaceholderTexture.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLPlatformInfo.cs">
+      <Link>OpenGL\OpenGLPlatformInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLResourceFactory.cs">
+      <Link>OpenGL\OpenGLResourceFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLResourceLayout.cs">
+      <Link>OpenGL\OpenGLResourceLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLResourceSet.cs">
+      <Link>OpenGL\OpenGLResourceSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLSampler.cs">
+      <Link>OpenGL\OpenGLSampler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLShader.cs">
+      <Link>OpenGL\OpenGLShader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLSwapchain.cs">
+      <Link>OpenGL\OpenGLSwapchain.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLSwapchainFramebuffer.cs">
+      <Link>OpenGL\OpenGLSwapchainFramebuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLTexture.cs">
+      <Link>OpenGL\OpenGLTexture.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLTextureSamplerManager.cs">
+      <Link>OpenGL\OpenGLTextureSamplerManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLTextureView.cs">
+      <Link>OpenGL\OpenGLTextureView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\OpenGLUtil.cs">
+      <Link>OpenGL\OpenGLUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\OpenGL\StagingMemoryPool.cs">
+      <Link>OpenGL\StagingMemoryPool.cs</Link>
+    </Compile>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NativeLibraryLoader">
+      <Version>1.0.12</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Veldrid.Core\Veldrid.Core.csproj">
+      <Project>{1385b687-f987-45a3-983a-526211ccaf80}</Project>
+      <Name>Veldrid.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
