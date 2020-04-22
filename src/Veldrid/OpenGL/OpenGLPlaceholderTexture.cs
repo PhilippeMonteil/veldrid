@@ -48,7 +48,7 @@
 
         public override bool IsDisposed => _disposed;
 
-        private protected override void DisposeCore()
+        protected override void DisposeCore()
         {
             _disposed = true;
         }

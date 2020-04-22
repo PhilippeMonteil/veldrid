@@ -15,7 +15,7 @@ namespace Veldrid
         private readonly List<IDisposable> _disposables = new List<IDisposable>();
         private Sampler _aniso4xSampler;
 
-        internal GraphicsDevice() { }
+        protected GraphicsDevice() { }
 
         /// <summary>
         /// Gets a value identifying the specific graphics API used by this instance.
@@ -91,8 +91,8 @@ namespace Veldrid
         /// </summary>
         public uint StructuredBufferMinOffsetAlignment => GetStructuredBufferMinOffsetAlignmentCore();
 
-        internal abstract uint GetUniformBufferMinOffsetAlignmentCore();
-        internal abstract uint GetStructuredBufferMinOffsetAlignmentCore();
+        protected abstract uint GetUniformBufferMinOffsetAlignmentCore();
+        protected abstract uint GetStructuredBufferMinOffsetAlignmentCore();
 
         /// <summary>
         /// Submits the given <see cref="CommandList"/> for execution by this device.
@@ -116,7 +116,7 @@ namespace Veldrid
         /// execution.</param>
         public void SubmitCommands(CommandList commandList, Fence fence) => SubmitCommandsCore(commandList, fence);
 
-        private protected abstract void SubmitCommandsCore(
+        protected abstract void SubmitCommandsCore(
             CommandList commandList,
             Fence fence);
 
@@ -214,7 +214,7 @@ namespace Veldrid
         /// <param name="swapchain">The <see cref="Swapchain"/> to swap and present.</param>
         public void SwapBuffers(Swapchain swapchain) => SwapBuffersCore(swapchain);
 
-        private protected abstract void SwapBuffersCore(Swapchain swapchain);
+        protected abstract void SwapBuffersCore(Swapchain swapchain);
 
         /// <summary>
         /// Gets a <see cref="Framebuffer"/> object representing the render targets of the main swapchain.
@@ -250,7 +250,7 @@ namespace Veldrid
             FlushDeferredDisposals();
         }
 
-        private protected abstract void WaitForIdleCore();
+        protected abstract void WaitForIdleCore();
 
         /// <summary>
         /// Gets the maximum sample count supported by the given <see cref="PixelFormat"/>.
@@ -440,7 +440,7 @@ namespace Veldrid
             gch.Free();
         }
 
-        private protected abstract void UpdateTextureCore(
+        protected abstract void UpdateTextureCore(
             Texture texture,
             IntPtr source,
             uint sizeInBytes,
@@ -617,7 +617,7 @@ namespace Veldrid
             UpdateBufferCore(buffer, bufferOffsetInBytes, source, sizeInBytes);
         }
 
-        private protected abstract void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes);
+        protected abstract void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes);
 
         /// <summary>
         /// Gets whether or not the given <see cref="PixelFormat"/>, <see cref="TextureType"/>, and <see cref="TextureUsage"/>
@@ -655,7 +655,7 @@ namespace Veldrid
             return GetPixelFormatSupportCore(format, type, usage, out properties);
         }
 
-        private protected abstract bool GetPixelFormatSupportCore(
+        protected abstract bool GetPixelFormatSupportCore(
             PixelFormat format,
             TextureType type,
             TextureUsage usage,

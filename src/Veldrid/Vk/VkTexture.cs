@@ -380,7 +380,7 @@ namespace Veldrid.Vk
             _format = format;
         }
 
-        private protected override void DisposeCore()
+        protected override void DisposeCore()
         {
             RefCount.Decrement();
         }

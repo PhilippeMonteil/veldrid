@@ -57,22 +57,22 @@ namespace Veldrid.OpenGL
             }
         }
 
-        private protected override void ClearColorTargetCore(uint index, RgbaFloat clearColor)
+        protected override void ClearColorTargetCore(uint index, RgbaFloat clearColor)
         {
             _currentCommands.ClearColorTarget(index, clearColor);
         }
 
-        private protected override void ClearDepthStencilCore(float depth, byte stencil)
+        protected override void ClearDepthStencilCore(float depth, byte stencil)
         {
             _currentCommands.ClearDepthTarget(depth, stencil);
         }
 
-        private protected override void DrawCore(uint vertexCount, uint instanceCount, uint vertexStart, uint instanceStart)
+        protected override void DrawCore(uint vertexCount, uint instanceCount, uint vertexStart, uint instanceStart)
         {
             _currentCommands.Draw(vertexCount, instanceCount, vertexStart, instanceStart);
         }
 
-        private protected override void DrawIndexedCore(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)
+        protected override void DrawIndexedCore(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)
         {
             _currentCommands.DrawIndexed(indexCount, instanceCount, indexStart, vertexOffset, instanceStart);
         }
@@ -112,12 +112,12 @@ namespace Veldrid.OpenGL
             _currentCommands.SetFramebuffer(fb);
         }
 
-        private protected override void SetIndexBufferCore(DeviceBuffer buffer, IndexFormat format, uint offset)
+        protected override void SetIndexBufferCore(DeviceBuffer buffer, IndexFormat format, uint offset)
         {
             _currentCommands.SetIndexBuffer(buffer, format, offset);
         }
 
-        private protected override void SetPipelineCore(Pipeline pipeline)
+        protected override void SetPipelineCore(Pipeline pipeline)
         {
             _currentCommands.SetPipeline(pipeline);
         }
@@ -137,7 +137,7 @@ namespace Veldrid.OpenGL
             _currentCommands.SetScissorRect(index, x, y, width, height);
         }
 
-        private protected override void SetVertexBufferCore(uint index, DeviceBuffer buffer, uint offset)
+        protected override void SetVertexBufferCore(uint index, DeviceBuffer buffer, uint offset)
         {
             _currentCommands.SetVertexBuffer(index, buffer, offset);
         }
@@ -152,7 +152,7 @@ namespace Veldrid.OpenGL
             _currentCommands.Reset();
         }
 
-        private protected override void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)
+        protected override void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)
         {
             _currentCommands.UpdateBuffer(buffer, bufferOffsetInBytes, source, sizeInBytes);
         }
@@ -192,7 +192,7 @@ namespace Veldrid.OpenGL
                 layerCount);
         }
 
-        private protected override void GenerateMipmapsCore(Texture texture)
+        protected override void GenerateMipmapsCore(Texture texture)
         {
             _currentCommands.GenerateMipmaps(texture);
         }
@@ -223,17 +223,17 @@ namespace Veldrid.OpenGL
             }
         }
 
-        private protected override void PushDebugGroupCore(string name)
+        protected override void PushDebugGroupCore(string name)
         {
             _currentCommands.PushDebugGroup(name);
         }
 
-        private protected override void PopDebugGroupCore()
+        protected override void PopDebugGroupCore()
         {
             _currentCommands.PopDebugGroup();
         }
 
-        private protected override void InsertDebugMarkerCore(string name)
+        protected override void InsertDebugMarkerCore(string name)
         {
             _currentCommands.InsertDebugMarker(name);
         }

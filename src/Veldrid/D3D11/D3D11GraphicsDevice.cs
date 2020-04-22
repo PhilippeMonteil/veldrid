@@ -164,7 +164,7 @@ namespace Veldrid.D3D11
             return d3D11DeviceOptions;
         }
 
-        private protected override void SubmitCommandsCore(CommandList cl, Fence fence)
+        protected override void SubmitCommandsCore(CommandList cl, Fence fence)
         {
             D3D11CommandList d3d11CL = Util.AssertSubtype<CommandList, D3D11CommandList>(cl);
             lock (_immediateContextLock)
@@ -182,7 +182,7 @@ namespace Veldrid.D3D11
             }
         }
 
-        private protected override void SwapBuffersCore(Swapchain swapchain)
+        protected override void SwapBuffersCore(Swapchain swapchain)
         {
             lock (_immediateContextLock)
             {
@@ -223,7 +223,7 @@ namespace Veldrid.D3D11
             return _device.CheckMultisampleQualityLevels(format, sampleCount) != 0;
         }
 
-        private protected override bool GetPixelFormatSupportCore(
+        protected override bool GetPixelFormatSupportCore(
             PixelFormat format,
             TextureType type,
             TextureUsage usage,
@@ -370,7 +370,7 @@ namespace Veldrid.D3D11
             }
         }
 
-        private protected unsafe override void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)
+        protected unsafe override void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)
         {
             D3D11Buffer d3dBuffer = Util.AssertSubtype<DeviceBuffer, D3D11Buffer>(buffer);
             if (sizeInBytes == 0)
@@ -462,7 +462,7 @@ namespace Veldrid.D3D11
             return Util.AssertSubtype<DeviceBuffer, D3D11Buffer>(staging);
         }
 
-        private protected unsafe override void UpdateTextureCore(
+        protected unsafe override void UpdateTextureCore(
             Texture texture,
             IntPtr source,
             uint sizeInBytes,
@@ -588,9 +588,9 @@ namespace Veldrid.D3D11
             Util.AssertSubtype<Fence, D3D11Fence>(fence).Reset();
         }
 
-        internal override uint GetUniformBufferMinOffsetAlignmentCore() => 256u;
+        protected override uint GetUniformBufferMinOffsetAlignmentCore() => 256u;
 
-        internal override uint GetStructuredBufferMinOffsetAlignmentCore() => 16;
+        protected override uint GetStructuredBufferMinOffsetAlignmentCore() => 16;
 
         private static int GetSyncInterval(bool syncToVBlank)
         {
@@ -616,11 +616,11 @@ namespace Veldrid.D3D11
             }
         }
 
-        private protected override void WaitForIdleCore()
+        protected override void WaitForIdleCore()
         {
         }
 
-        public override bool GetD3D11Info(out BackendInfoD3D11 info)
+        public bool GetD3D11Info(out BackendInfoD3D11 info)
         {
             info = _d3d11Info;
             return true;

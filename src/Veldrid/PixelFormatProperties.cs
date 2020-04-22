@@ -41,7 +41,7 @@
             return (_sampleCounts & (1 << bit)) != 0;
         }
 
-        internal PixelFormatProperties(
+        public PixelFormatProperties(
             uint maxWidth,
             uint maxHeight,
             uint maxDepth,

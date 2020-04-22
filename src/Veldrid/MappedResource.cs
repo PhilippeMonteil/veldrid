@@ -40,7 +40,7 @@ namespace Veldrid
         /// </summary>
         public readonly uint DepthPitch;
 
-        internal MappedResource(
+        public MappedResource(
             MappableResource resource,
             MapMode mode,
             IntPtr data,
@@ -58,7 +58,7 @@ namespace Veldrid
             DepthPitch = depthPitch;
         }
 
-        internal MappedResource(MappableResource resource, MapMode mode, IntPtr data, uint sizeInBytes)
+        public MappedResource(MappableResource resource, MapMode mode, IntPtr data, uint sizeInBytes)
         {
             Resource = resource;
             Mode = mode;

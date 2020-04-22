@@ -10,7 +10,7 @@ namespace Veldrid
     /// </summary>
     public abstract class SwapchainSource
     {
-        internal SwapchainSource() { }
+        protected SwapchainSource() { }
 
         /// <summary>
         /// Creates a new SwapchainSource for a Win32 window.
@@ -89,7 +89,7 @@ namespace Veldrid
             => new NSViewSwapchainSource(nsView);
     }
 
-    internal class Win32SwapchainSource : SwapchainSource
+    public class Win32SwapchainSource : SwapchainSource
     {
         public IntPtr Hwnd { get; }
         public IntPtr Hinstance { get; }
@@ -101,7 +101,7 @@ namespace Veldrid
         }
     }
 
-    internal class UwpSwapchainSource : SwapchainSource
+    public class UwpSwapchainSource : SwapchainSource
     {
         public object SwapChainPanelNative { get; }
         public float LogicalDpi { get; }

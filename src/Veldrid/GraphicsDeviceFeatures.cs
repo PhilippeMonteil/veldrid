@@ -92,7 +92,7 @@
         /// </summary>
         public bool BufferRangeBinding { get; }
 
-        internal GraphicsDeviceFeatures(
+        public GraphicsDeviceFeatures(
             bool computeShader,
             bool geometryShader,
             bool tessellationShaders,

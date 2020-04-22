@@ -173,7 +173,7 @@ namespace Veldrid.MTL
             }
         }
 
-        private protected override void SubmitCommandsCore(CommandList commandList, Fence fence)
+        protected override void SubmitCommandsCore(CommandList commandList, Fence fence)
         {
             MTLCommandList mtlCL = Util.AssertSubtype<CommandList, MTLCommandList>(commandList);
 
@@ -203,7 +203,7 @@ namespace Veldrid.MTL
             return TextureSampleCount.Count1;
         }
 
-        private protected override bool GetPixelFormatSupportCore(
+        protected override bool GetPixelFormatSupportCore(
             PixelFormat format,
             TextureType type,
             TextureUsage usage,
@@ -274,7 +274,7 @@ namespace Veldrid.MTL
             return true;
         }
 
-        private protected override void SwapBuffersCore(Swapchain swapchain)
+        protected override void SwapBuffersCore(Swapchain swapchain)
         {
             MTLSwapchain mtlSC = Util.AssertSubtype<Swapchain, MTLSwapchain>(swapchain);
             IntPtr currentDrawablePtr = mtlSC.CurrentDrawable.NativePtr;
@@ -291,7 +291,7 @@ namespace Veldrid.MTL
             mtlSC.GetNextDrawable();
         }
 
-        private protected override void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)
+        protected override void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)
         {
             var mtlBuffer = Util.AssertSubtype<DeviceBuffer, MTLBuffer>(buffer);
             void* destPtr = mtlBuffer.DeviceBuffer.contents();
@@ -299,7 +299,7 @@ namespace Veldrid.MTL
             Unsafe.CopyBlock(destOffsetPtr, source.ToPointer(), sizeInBytes);
         }
 
-        private protected override void UpdateTextureCore(
+        protected override void UpdateTextureCore(
             Texture texture,
             IntPtr source,
             uint sizeInBytes,
@@ -348,7 +348,7 @@ namespace Veldrid.MTL
             }
         }
 
-        private protected override void WaitForIdleCore()
+        protected override void WaitForIdleCore()
         {
             MTLCommandBuffer lastCB = default(MTLCommandBuffer);
             lock (_submittedCommandsLock)

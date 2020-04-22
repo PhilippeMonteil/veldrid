@@ -40,7 +40,7 @@ namespace Veldrid.MTL
             _height = height;
         }
 
-        private protected override void DisposeCore()
+        protected override void DisposeCore()
         {
             _disposed = true;
         }

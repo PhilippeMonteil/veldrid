@@ -36,9 +36,9 @@ namespace Veldrid
         /// </summary>
         public virtual uint Height { get; }
 
-        internal Framebuffer() { }
+        protected Framebuffer() { }
 
-        internal Framebuffer(
+        protected Framebuffer(
             FramebufferAttachmentDescription? depthTargetDesc,
             IReadOnlyList<FramebufferAttachmentDescription> colorTargetDescs)
         {

@@ -169,7 +169,7 @@ namespace Veldrid.Vk
 
         public override ResourceFactory ResourceFactory { get; }
 
-        private protected override void SubmitCommandsCore(CommandList cl, Fence fence)
+        protected override void SubmitCommandsCore(CommandList cl, Fence fence)
         {
             SubmitCommandList(cl, 0, null, 0, null, fence);
         }
@@ -328,7 +328,7 @@ namespace Veldrid.Vk
             }
         }
 
-        private protected override void SwapBuffersCore(Swapchain swapchain)
+        protected override void SwapBuffersCore(Swapchain swapchain)
         {
             VkSwapchain vkSC = Util.AssertSubtype<Swapchain, VkSwapchain>(swapchain);
             VkSwapchainKHR deviceSwapchain = vkSC.DeviceSwapchain;
@@ -981,7 +981,7 @@ namespace Veldrid.Vk
             vkDestroyInstance(_instance, null);
         }
 
-        private protected override void WaitForIdleCore()
+        protected override void WaitForIdleCore()
         {
             lock (_graphicsQueueLock)
             {
@@ -1030,7 +1030,7 @@ namespace Veldrid.Vk
             return TextureSampleCount.Count1;
         }
 
-        private protected override bool GetPixelFormatSupportCore(
+        protected override bool GetPixelFormatSupportCore(
             PixelFormat format,
             TextureType type,
             TextureUsage usage,
@@ -1081,7 +1081,7 @@ namespace Veldrid.Vk
             return filter;
         }
 
-        private protected override void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)
+        protected override void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)
         {
             VkBuffer vkBuffer = Util.AssertSubtype<DeviceBuffer, VkBuffer>(buffer);
             VkBuffer copySrcVkBuffer = null;
@@ -1155,7 +1155,7 @@ namespace Veldrid.Vk
             }
         }
 
-        private protected override void UpdateTextureCore(
+        protected override void UpdateTextureCore(
             Texture texture,
             IntPtr source,
             uint sizeInBytes,

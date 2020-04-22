@@ -70,7 +70,7 @@ namespace Veldrid
         /// </summary>
         public abstract bool IsDisposed { get; }
 
-        internal TextureView GetFullTextureView(GraphicsDevice gd)
+        public TextureView GetFullTextureView(GraphicsDevice gd)
         {
             lock (_fullTextureViewLock)
             {
@@ -83,7 +83,7 @@ namespace Veldrid
             }
         }
 
-        private protected virtual TextureView CreateFullTextureView(GraphicsDevice gd)
+        protected virtual TextureView CreateFullTextureView(GraphicsDevice gd)
         {
             return gd.ResourceFactory.CreateTextureView(this);
         }
@@ -101,6 +101,6 @@ namespace Veldrid
             DisposeCore();
         }
 
-        private protected abstract void DisposeCore();
+        protected abstract void DisposeCore();
     }
 }

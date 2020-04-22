@@ -167,7 +167,7 @@ namespace Veldrid.D3D11
             TypelessDxgiFormat = D3D11Formats.GetTypelessFormat(DxgiFormat);
         }
 
-        private protected override TextureView CreateFullTextureView(GraphicsDevice gd)
+        protected override TextureView CreateFullTextureView(GraphicsDevice gd)
         {
             TextureViewDescription desc = new TextureViewDescription(this);
             D3D11GraphicsDevice d3d11GD = Util.AssertSubtype<GraphicsDevice, D3D11GraphicsDevice>(gd);
@@ -184,7 +184,7 @@ namespace Veldrid.D3D11
             }
         }
 
-        private protected override void DisposeCore()
+        protected override void DisposeCore()
         {
             DeviceTexture.Dispose();
         }

@@ -4,6 +4,38 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;EXCLUDE_OPENGL_BACKEND;EXCLUDE_VULKAN_BACKEND;EXCLUDE_METAL_BACKEND</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;EXCLUDE_OPENGL_BACKEND;EXCLUDE_VULKAN_BACKEND;EXCLUDE_METAL_BACKEND</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\src\Veldrid\BackendInfoD3D11.cs" Link="BackendInfoD3D11.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11DeviceOptions.cs" Link="D3D11DeviceOptions.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11Buffer.cs" Link="D3D11Buffer.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11CommandList.cs" Link="D3D11CommandList.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11Fence.cs" Link="D3D11Fence.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11Formats.cs" Link="D3D11Formats.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11Framebuffer.cs" Link="D3D11Framebuffer.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11GraphicsDevice.cs" Link="D3D11GraphicsDevice.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11Pipeline.cs" Link="D3D11Pipeline.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11ResourceCache.cs" Link="D3D11ResourceCache.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11ResourceFactory.cs" Link="D3D11ResourceFactory.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11ResourceLayout.cs" Link="D3D11ResourceLayout.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11ResourceSet.cs" Link="D3D11ResourceSet.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11Sampler.cs" Link="D3D11Sampler.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11Shader.cs" Link="D3D11Shader.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11Swapchain.cs" Link="D3D11Swapchain.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11Texture.cs" Link="D3D11Texture.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11TextureView.cs" Link="D3D11TextureView.cs" />
+    <Compile Include="..\..\..\src\Veldrid\D3D11\D3D11Util.cs" Link="D3D11Util.cs" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="SharpDX" Version="4.2.0" />
     <PackageReference Include="SharpDX.D3DCompiler" Version="4.2.0" />

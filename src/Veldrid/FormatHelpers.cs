@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace Veldrid
 {
-    internal static class FormatHelpers
+    public static class FormatHelpers
     {
         public static uint GetSizeInBytes(PixelFormat format)
         {
@@ -177,7 +177,7 @@ namespace Veldrid
             }
         }
 
-        internal static uint GetSampleCountUInt32(TextureSampleCount sampleCount)
+        public static uint GetSampleCountUInt32(TextureSampleCount sampleCount)
         {
             switch (sampleCount)
             {
@@ -198,12 +198,12 @@ namespace Veldrid
             }
         }
 
-        internal static bool IsStencilFormat(PixelFormat format)
+        public static bool IsStencilFormat(PixelFormat format)
         {
             return format == PixelFormat.D24_UNorm_S8_UInt || format == PixelFormat.D32_Float_S8_UInt;
         }
 
-        internal static bool IsDepthStencilFormat(PixelFormat format)
+        public static bool IsDepthStencilFormat(PixelFormat format)
         {
             return format == PixelFormat.D32_Float_S8_UInt
                 || format == PixelFormat.D24_UNorm_S8_UInt
@@ -211,7 +211,7 @@ namespace Veldrid
                 || format == PixelFormat.R32_Float;
         }
 
-        internal static bool IsCompressedFormat(PixelFormat format)
+        public static bool IsCompressedFormat(PixelFormat format)
         {
             return format == PixelFormat.BC1_Rgb_UNorm
                 || format == PixelFormat.BC1_Rgb_UNorm_SRgb
@@ -232,7 +232,7 @@ namespace Veldrid
                 || format == PixelFormat.ETC2_R8_G8_B8_A8_UNorm;
         }
 
-        internal static uint GetRowPitch(uint width, PixelFormat format)
+        public static uint GetRowPitch(uint width, PixelFormat format)
         {
             switch (format)
             {
@@ -290,7 +290,7 @@ namespace Veldrid
             }
         }
 
-        internal static bool IsFormatViewCompatible(PixelFormat viewFormat, PixelFormat realFormat)
+        public static bool IsFormatViewCompatible(PixelFormat viewFormat, PixelFormat realFormat)
         {
             if (IsCompressedFormat(realFormat))
             {
@@ -307,7 +307,7 @@ namespace Veldrid
             throw new NotImplementedException();
         }
 
-        internal static uint GetNumRows(uint height, PixelFormat format)
+        public static uint GetNumRows(uint height, PixelFormat format)
         {
             switch (format)
             {
@@ -335,12 +335,12 @@ namespace Veldrid
             }
         }
 
-        internal static uint GetDepthPitch(uint rowPitch, uint height, PixelFormat format)
+        public static uint GetDepthPitch(uint rowPitch, uint height, PixelFormat format)
         {
             return rowPitch * GetNumRows(height, format);
         }
 
-        internal static uint GetRegionSize(uint width, uint height, uint depth, PixelFormat format)
+        public static uint GetRegionSize(uint width, uint height, uint depth, PixelFormat format)
         {
             uint blockSizeInBytes;
             if (IsCompressedFormat(format))
@@ -358,7 +358,7 @@ namespace Veldrid
             return width * height * depth * blockSizeInBytes;
         }
 
-        internal static TextureSampleCount GetSampleCount(uint samples)
+        public static TextureSampleCount GetSampleCount(uint samples)
         {
             switch (samples)
             {
@@ -372,7 +372,7 @@ namespace Veldrid
             }
         }
 
-        internal static PixelFormat GetViewFamilyFormat(PixelFormat format)
+        public static PixelFormat GetViewFamilyFormat(PixelFormat format)
         {
             switch (format)
             {

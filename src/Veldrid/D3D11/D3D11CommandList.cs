@@ -43,12 +43,12 @@ namespace Veldrid.D3D11
         private DomainShader _domainShader;
         private PixelShader _pixelShader;
 
-        private new D3D11Pipeline _graphicsPipeline;
+        new private D3D11Pipeline _graphicsPipeline;
         private BoundResourceSetInfo[] _graphicsResourceSets = new BoundResourceSetInfo[1];
         // Resource sets are invalidated when a new resource set is bound with an incompatible SRV or UAV.
         private bool[] _invalidatedGraphicsResourceSets = new bool[1];
 
-        private new D3D11Pipeline _computePipeline;
+        new private D3D11Pipeline _computePipeline;
         private BoundResourceSetInfo[] _computeResourceSets = new BoundResourceSetInfo[1];
         // Resource sets are invalidated when a new resource set is bound with an incompatible SRV or UAV.
         private bool[] _invalidatedComputeResourceSets = new bool[1];
@@ -211,7 +211,7 @@ namespace Veldrid.D3D11
             _begun = false;
         }
 
-        private protected override void SetIndexBufferCore(DeviceBuffer buffer, IndexFormat format, uint offset)
+        protected override void SetIndexBufferCore(DeviceBuffer buffer, IndexFormat format, uint offset)
         {
             if (_ib != buffer || _ibOffset != offset)
             {
@@ -223,7 +223,7 @@ namespace Veldrid.D3D11
             }
         }
 
-        private protected override void SetPipelineCore(Pipeline pipeline)
+        protected override void SetPipelineCore(Pipeline pipeline)
         {
             if (!pipeline.IsComputePipeline && _graphicsPipeline != pipeline)
             {
@@ -544,7 +544,7 @@ namespace Veldrid.D3D11
             return ret;
         }
 
-        private protected override void SetVertexBufferCore(uint index, DeviceBuffer buffer, uint offset)
+        protected override void SetVertexBufferCore(uint index, DeviceBuffer buffer, uint offset)
         {
             D3D11Buffer d3d11Buffer = Util.AssertSubtype<DeviceBuffer, D3D11Buffer>(buffer);
             if (_vertexBindings[index] != d3d11Buffer.Buffer || _vertexOffsets[index] != offset)
@@ -557,7 +557,7 @@ namespace Veldrid.D3D11
             }
         }
 
-        private protected override void DrawCore(uint vertexCount, uint instanceCount, uint vertexStart, uint instanceStart)
+        protected override void DrawCore(uint vertexCount, uint instanceCount, uint vertexStart, uint instanceStart)
         {
             PreDrawCommand();
 
@@ -571,7 +571,7 @@ namespace Veldrid.D3D11
             }
         }
 
-        private protected override void DrawIndexedCore(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)
+        protected override void DrawIndexedCore(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)
         {
             PreDrawCommand();
 
@@ -1145,17 +1145,17 @@ namespace Veldrid.D3D11
             _context.OutputMerger.SetRenderTargets(d3dFB.DepthStencilView, d3dFB.RenderTargetViews);
         }
 
-        private protected override void ClearColorTargetCore(uint index, RgbaFloat clearColor)
+        protected override void ClearColorTargetCore(uint index, RgbaFloat clearColor)
         {
             _context.ClearRenderTargetView(D3D11Framebuffer.RenderTargetViews[index], new RawColor4(clearColor.R, clearColor.G, clearColor.B, clearColor.A));
         }
 
-        private protected override void ClearDepthStencilCore(float depth, byte stencil)
+        protected override void ClearDepthStencilCore(float depth, byte stencil)
         {
             _context.ClearDepthStencilView(D3D11Framebuffer.DepthStencilView, DepthStencilClearFlags.Depth | DepthStencilClearFlags.Stencil, depth, stencil);
         }
 
-        private protected unsafe override void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)
+        protected unsafe override void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)
         {
             D3D11Buffer d3dBuffer = Util.AssertSubtype<DeviceBuffer, D3D11Buffer>(buffer);
             if (sizeInBytes == 0)
@@ -1313,7 +1313,7 @@ namespace Veldrid.D3D11
             }
         }
 
-        private protected override void GenerateMipmapsCore(Texture texture)
+        protected override void GenerateMipmapsCore(Texture texture)
         {
             TextureView fullTexView = texture.GetFullTextureView(_gd);
             D3D11TextureView d3d11View = Util.AssertSubtype<TextureView, D3D11TextureView>(fullTexView);
@@ -1350,17 +1350,17 @@ namespace Veldrid.D3D11
             _submittedStagingBuffers.Clear();
         }
 
-        private protected override void PushDebugGroupCore(string name)
+        protected override void PushDebugGroupCore(string name)
         {
             _uda?.BeginEvent(name);
         }
 
-        private protected override void PopDebugGroupCore()
+        protected override void PopDebugGroupCore()
         {
             _uda?.EndEvent();
         }
 
-        private protected override void InsertDebugMarkerCore(string name)
+        protected override void InsertDebugMarkerCore(string name)
         {
             _uda?.SetMarker(name);
         }

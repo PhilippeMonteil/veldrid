@@ -219,7 +219,7 @@ namespace Veldrid
         /// <returns></returns>
         protected abstract Texture CreateTextureCore(ulong nativeTexture, ref TextureDescription description);
 
-        // TODO: private protected
+        // TODO: protected
         /// <summary>
         /// </summary>
         /// <param name="description"></param>
@@ -280,7 +280,7 @@ namespace Veldrid
             return CreateTextureViewCore(ref description);
         }
 
-        // TODO: private protected
+        // TODO: protected
         /// <summary>
         /// </summary>
         /// <param name="description"></param>
@@ -344,7 +344,7 @@ namespace Veldrid
             return CreateBufferCore(ref description);
         }
 
-        // TODO: private protected
+        // TODO: protected
         /// <summary>
         /// </summary>
         /// <param name="description"></param>

@@ -34,7 +34,7 @@ namespace Veldrid
         /// </summary>
         public PixelFormat Format { get; }
 
-        internal TextureView(ref TextureViewDescription description)
+        protected TextureView(ref TextureViewDescription description)
         {
             Target = description.Target;
             BaseMipLevel = description.BaseMipLevel;
