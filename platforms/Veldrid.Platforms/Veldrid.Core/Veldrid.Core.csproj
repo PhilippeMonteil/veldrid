@@ -1,0 +1,116 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;EXCLUDE_D3D11_BACKEND;EXCLUDE_OPENGL_BACKEND;EXCLUDE_VULKAN_BACKEND;EXCLUDE_METAL_BACKEND</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;EXCLUDE_D3D11_BACKEND;EXCLUDE_OPENGL_BACKEND;EXCLUDE_VULKAN_BACKEND;EXCLUDE_METAL_BACKEND</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\src\Veldrid\BindableResource.cs" Link="BindableResource.cs" />
+    <Compile Include="..\..\..\src\Veldrid\BlendAttachmentDescription.cs" Link="BlendAttachmentDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\BlendFactor.cs" Link="BlendFactor.cs" />
+    <Compile Include="..\..\..\src\Veldrid\BlendFunction.cs" Link="BlendFunction.cs" />
+    <Compile Include="..\..\..\src\Veldrid\BlendStateDescription.cs" Link="BlendStateDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\BoundResourceSetInfo.cs" Link="BoundResourceSetInfo.cs" />
+    <Compile Include="..\..\..\src\Veldrid\Buffer.cs" Link="Buffer.cs" />
+    <Compile Include="..\..\..\src\Veldrid\BufferDescription.cs" Link="BufferDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\BufferUsage.cs" Link="BufferUsage.cs" />
+    <Compile Include="..\..\..\src\Veldrid\CommandList.cs" Link="CommandList.cs" />
+    <Compile Include="..\..\..\src\Veldrid\CommandListDescription.cs" Link="CommandListDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ComparisonKind.cs" Link="ComparisonKind.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ComputePipelineDescription.cs" Link="ComputePipelineDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\DepthStencilStateDescription.cs" Link="DepthStencilStateDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\DeviceBufferRange.cs" Link="DeviceBufferRange.cs" />
+    <Compile Include="..\..\..\src\Veldrid\DeviceResource.cs" Link="DeviceResource.cs" />
+    <Compile Include="..\..\..\src\Veldrid\FaceCullMode.cs" Link="FaceCullMode.cs" />
+    <Compile Include="..\..\..\src\Veldrid\Fence.cs" Link="Fence.cs" />
+    <Compile Include="..\..\..\src\Veldrid\FormatHelpers.cs" Link="FormatHelpers.cs" />
+    <Compile Include="..\..\..\src\Veldrid\Framebuffer.cs" Link="Framebuffer.cs" />
+    <Compile Include="..\..\..\src\Veldrid\FramebufferAttachment.cs" Link="FramebufferAttachment.cs" />
+    <Compile Include="..\..\..\src\Veldrid\FramebufferAttachmentDescription.cs" Link="FramebufferAttachmentDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\FramebufferDescription.cs" Link="FramebufferDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\FrontFace.cs" Link="FrontFace.cs" />
+    <Compile Include="..\..\..\src\Veldrid\GraphicsBackend.cs" Link="GraphicsBackend.cs" />
+    <Compile Include="..\..\..\src\Veldrid\GraphicsDevice.cs" Link="GraphicsDevice.cs" />
+    <Compile Include="..\..\..\src\Veldrid\GraphicsDeviceFeatures.cs" Link="GraphicsDeviceFeatures.cs" />
+    <Compile Include="..\..\..\src\Veldrid\GraphicsDeviceOptions.cs" Link="GraphicsDeviceOptions.cs" />
+    <Compile Include="..\..\..\src\Veldrid\GraphicsPipelineDescription.cs" Link="GraphicsPipelineDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\HashHelper.cs" Link="HashHelper.cs" />
+    <Compile Include="..\..\..\src\Veldrid\IllegalValueException.cs" Link="IllegalValueException.cs" />
+    <Compile Include="..\..\..\src\Veldrid\IndexFormat.cs" Link="IndexFormat.cs" />
+    <Compile Include="..\..\..\src\Veldrid\IndirectDispatchArguments.cs" Link="IndirectDispatchArguments.cs" />
+    <Compile Include="..\..\..\src\Veldrid\IndirectDrawArguments.cs" Link="IndirectDrawArguments.cs" />
+    <Compile Include="..\..\..\src\Veldrid\IndirectDrawIndexedArguments.cs" Link="IndirectDrawIndexedArguments.cs" />
+    <Compile Include="..\..\..\src\Veldrid\MapMode.cs" Link="MapMode.cs" />
+    <Compile Include="..\..\..\src\Veldrid\MappableResource.cs" Link="MappableResource.cs" />
+    <Compile Include="..\..\..\src\Veldrid\MappedResource.cs" Link="MappedResource.cs" />
+    <Compile Include="..\..\..\src\Veldrid\MappedResourceCacheKey.cs" Link="MappedResourceCacheKey.cs" />
+    <Compile Include="..\..\..\src\Veldrid\MappedResourceInfo.cs" Link="MappedResourceInfo.cs" />
+    <Compile Include="..\..\..\src\Veldrid\OutputAttachmentDescription.cs" Link="OutputAttachmentDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\OutputDescription.cs" Link="OutputDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\Pipeline.cs" Link="Pipeline.cs" />
+    <Compile Include="..\..\..\src\Veldrid\PixelFormat.cs" Link="PixelFormat.cs" />
+    <Compile Include="..\..\..\src\Veldrid\PixelFormatProperties.cs" Link="PixelFormatProperties.cs" />
+    <Compile Include="..\..\..\src\Veldrid\PolygonFillMode.cs" Link="PolygonFillMode.cs" />
+    <Compile Include="..\..\..\src\Veldrid\PrimitiveTopology.cs" Link="PrimitiveTopology.cs" />
+    <Compile Include="..\..\..\src\Veldrid\RasterizerStateDescription.cs" Link="RasterizerStateDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ResourceBindingModel.cs" Link="ResourceBindingModel.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ResourceFactory.cs" Link="ResourceFactory.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ResourceKind.cs" Link="ResourceKind.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ResourceLayout.cs" Link="ResourceLayout.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ResourceLayoutDescription.cs" Link="ResourceLayoutDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ResourceLayoutElementDescription.cs" Link="ResourceLayoutElementDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ResourceSet.cs" Link="ResourceSet.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ResourceSetDescription.cs" Link="ResourceSetDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\RgbaByte.cs" Link="RgbaByte.cs" />
+    <Compile Include="..\..\..\src\Veldrid\RgbaFloat.cs" Link="RgbaFloat.cs" />
+    <Compile Include="..\..\..\src\Veldrid\Sampler.cs" Link="Sampler.cs" />
+    <Compile Include="..\..\..\src\Veldrid\SamplerAddressMode.cs" Link="SamplerAddressMode.cs" />
+    <Compile Include="..\..\..\src\Veldrid\SamplerBorderColor.cs" Link="SamplerBorderColor.cs" />
+    <Compile Include="..\..\..\src\Veldrid\SamplerDescription.cs" Link="SamplerDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\SamplerFilter.cs" Link="SamplerFilter.cs" />
+    <Compile Include="..\..\..\src\Veldrid\Shader.cs" Link="Shader.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ShaderConstantType.cs" Link="ShaderConstantType.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ShaderDescription.cs" Link="ShaderDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ShaderSetDescription.cs" Link="ShaderSetDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ShaderStages.cs" Link="ShaderStages.cs" />
+    <Compile Include="..\..\..\src\Veldrid\SmallFixedOrDynamicArray.cs" Link="SmallFixedOrDynamicArray.cs" />
+    <Compile Include="..\..\..\src\Veldrid\SpecializationConstant.cs" Link="SpecializationConstant.cs" />
+    <Compile Include="..\..\..\src\Veldrid\StencilBehaviorDescription.cs" Link="StencilBehaviorDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\StencilOperation.cs" Link="StencilOperation.cs" />
+    <Compile Include="..\..\..\src\Veldrid\Swapchain.cs" Link="Swapchain.cs" />
+    <Compile Include="..\..\..\src\Veldrid\SwapchainDescription.cs" Link="SwapchainDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\SwapchainSource.cs" Link="SwapchainSource.cs" />
+    <Compile Include="..\..\..\src\Veldrid\Texture.cs" Link="Texture.cs" />
+    <Compile Include="..\..\..\src\Veldrid\TextureDescription.cs" Link="TextureDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\TextureSampleCount.cs" Link="TextureSampleCount.cs" />
+    <Compile Include="..\..\..\src\Veldrid\TextureType.cs" Link="TextureType.cs" />
+    <Compile Include="..\..\..\src\Veldrid\TextureUsage.cs" Link="TextureUsage.cs" />
+    <Compile Include="..\..\..\src\Veldrid\TextureView.cs" Link="TextureView.cs" />
+    <Compile Include="..\..\..\src\Veldrid\TextureViewDescription.cs" Link="TextureViewDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\Util.cs" Link="Util.cs" />
+    <Compile Include="..\..\..\src\Veldrid\ValidationHelpers.cs" Link="ValidationHelpers.cs" />
+    <Compile Include="..\..\..\src\Veldrid\VdException.cs" Link="VdException.cs" />
+    <Compile Include="..\..\..\src\Veldrid\VertexElementDescription.cs" Link="VertexElementDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\VertexElementFormat.cs" Link="VertexElementFormat.cs" />
+    <Compile Include="..\..\..\src\Veldrid\VertexElementSemantic.cs" Link="VertexElementSemantic.cs" />
+    <Compile Include="..\..\..\src\Veldrid\VertexLayoutDescription.cs" Link="VertexLayoutDescription.cs" />
+    <Compile Include="..\..\..\src\Veldrid\Viewport.cs" Link="Viewport.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Buffers" Version="4.5.1" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.7.1" />
+  </ItemGroup>
+
+</Project>

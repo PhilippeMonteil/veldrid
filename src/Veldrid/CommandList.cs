@@ -899,8 +899,10 @@ namespace Veldrid
         /// <param name="destination">The destination of Texture data.</param>
         public void CopyTexture(Texture source, Texture destination)
         {
+            uint effectiveSrcArrayLayers = 0; // TBC
+
 #if VALIDATE_USAGE
-            uint effectiveSrcArrayLayers = (source.Usage & TextureUsage.Cubemap) != 0
+            effectiveSrcArrayLayers = (source.Usage & TextureUsage.Cubemap) != 0
                 ? source.ArrayLayers * 6
                 : source.ArrayLayers;
             uint effectiveDstArrayLayers = (destination.Usage & TextureUsage.Cubemap) != 0
