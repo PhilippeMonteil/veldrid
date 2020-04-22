@@ -113,7 +113,7 @@ namespace Veldrid
         }
     }
 
-    internal class XlibSwapchainSource : SwapchainSource
+    public class XlibSwapchainSource : SwapchainSource
     {
         public IntPtr Display { get; }
         public IntPtr Window { get; }
@@ -125,7 +125,7 @@ namespace Veldrid
         }
     }
 
-    internal class WaylandSwapchainSource : SwapchainSource
+    public class WaylandSwapchainSource : SwapchainSource
     {
         public IntPtr Display { get; }
         public IntPtr Surface { get; }

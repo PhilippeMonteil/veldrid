@@ -15,7 +15,7 @@ namespace Veldrid.Vk
         public VkDescriptorSetLayout DescriptorSetLayout => _dsl;
         public VkDescriptorType[] DescriptorTypes => _descriptorTypes;
         public DescriptorResourceCounts DescriptorResourceCounts { get; }
-        public new int DynamicBufferCount { get; }
+        public int DynamicBufferCount { get; }
 
         public override bool IsDisposed => _disposed;
 

@@ -261,3 +261,4 @@ launchSettings.json
 
 # Generated shaders
 Shaders.Generated
+/platforms/Veldrid.Platforms/NUGet/Veldrid.Platforms/lib

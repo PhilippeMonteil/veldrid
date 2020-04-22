@@ -75,7 +75,7 @@ namespace Veldrid.Vk
 
         public override GraphicsDeviceFeatures Features { get; }
 
-        public override bool GetVulkanInfo(out BackendInfoVulkan info)
+        public bool GetVulkanInfo(out BackendInfoVulkan info)
         {
             info = _vulkanInfo;
             return true;
@@ -1405,10 +1405,10 @@ namespace Veldrid.Vk
             pool.EndAndSubmit(cb);
         }
 
-        internal override uint GetUniformBufferMinOffsetAlignmentCore()
+        protected override uint GetUniformBufferMinOffsetAlignmentCore()
             => (uint)_physicalDeviceProperties.limits.minUniformBufferOffsetAlignment;
 
-        internal override uint GetStructuredBufferMinOffsetAlignmentCore()
+        protected override uint GetStructuredBufferMinOffsetAlignmentCore()
             => (uint)_physicalDeviceProperties.limits.minStorageBufferOffsetAlignment;
 
         internal void TransitionImageLayout(VkTexture texture, VkImageLayout layout)

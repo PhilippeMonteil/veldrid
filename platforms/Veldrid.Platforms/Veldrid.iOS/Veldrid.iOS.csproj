@@ -103,6 +103,7 @@
     <Compile Include="..\..\..\src\Veldrid\MTL\MTLUnalignedBufferCopyInfo.cs">
       <Link>MTLUnalignedBufferCopyInfo.cs</Link>
     </Compile>
+    <Compile Include="GraphicsDeviceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
