@@ -13,7 +13,7 @@ namespace Veldrid
     {
         private readonly OpenGLGraphicsDevice _gd;
 
-        internal BackendInfoOpenGL(OpenGLGraphicsDevice gd)
+        public BackendInfoOpenGL(OpenGLGraphicsDevice gd)
         {
             _gd = gd;
         }

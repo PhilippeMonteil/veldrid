@@ -14,7 +14,7 @@ using System.Runtime.CompilerServices;
 
 namespace Veldrid.OpenGL
 {
-    internal unsafe class OpenGLGraphicsDevice : GraphicsDevice
+    public unsafe class OpenGLGraphicsDevice : GraphicsDevice
     {
         private ResourceFactory _resourceFactory;
         private GraphicsBackend _backendType;
@@ -1061,7 +1061,7 @@ namespace Veldrid.OpenGL
             _executionThread.Terminate();
         }
 
-        public override bool GetOpenGLInfo(out BackendInfoOpenGL info)
+        public bool GetOpenGLInfo(out BackendInfoOpenGL info)
         {
             info = _openglInfo;
             return true;
@@ -1083,9 +1083,9 @@ namespace Veldrid.OpenGL
             _executionThread.InitializeResource(deferredResource);
         }
 
-        internal override uint GetUniformBufferMinOffsetAlignmentCore() => _minUboOffsetAlignment;
+        protected override uint GetUniformBufferMinOffsetAlignmentCore() => _minUboOffsetAlignment;
 
-        internal override uint GetStructuredBufferMinOffsetAlignmentCore() => _minSsboOffsetAlignment;
+        protected override uint GetStructuredBufferMinOffsetAlignmentCore() => _minSsboOffsetAlignment;
 
         private class ExecutionThread
         {

@@ -4,7 +4,7 @@ using Veldrid.OpenGLBinding;
 
 namespace Veldrid.OpenGL
 {
-    internal unsafe class OpenGLSampler : Sampler, OpenGLDeferredResource
+    public unsafe class OpenGLSampler : Sampler, OpenGLDeferredResource
     {
         private readonly OpenGLGraphicsDevice _gd;
         private readonly SamplerDescription _description;
@@ -95,7 +95,7 @@ namespace Veldrid.OpenGL
                     || description.AddressModeW == SamplerAddressMode.Border)
                 {
                     RgbaFloat borderColor = ToRgbaFloat(description.BorderColor);
-                    glSamplerParameterfv(_sampler, SamplerParameterName.TextureBorderColor, (float*)&borderColor);
+                    // TBD glSamplerParameterfv(_sampler, SamplerParameterName.TextureBorderColor, (float*)&borderColor.R); // TBC
                     CheckLastError();
                 }
 

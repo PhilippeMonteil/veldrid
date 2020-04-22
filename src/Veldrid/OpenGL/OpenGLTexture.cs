@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace Veldrid.OpenGL
 {
-    internal unsafe class OpenGLTexture : Texture, OpenGLDeferredResource
+    public unsafe class OpenGLTexture : Texture, OpenGLDeferredResource
     {
         private readonly OpenGLGraphicsDevice _gd;
         private uint _texture;

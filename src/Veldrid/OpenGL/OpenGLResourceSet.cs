@@ -4,8 +4,8 @@
     {
         private bool _disposed;
 
-        public new OpenGLResourceLayout Layout { get; }
-        public new BindableResource[] Resources { get; }
+        public OpenGLResourceLayout Layout { get; }
+        public BindableResource[] Resources { get; }
         public override string Name { get; set; }
 
         public override bool IsDisposed => _disposed;

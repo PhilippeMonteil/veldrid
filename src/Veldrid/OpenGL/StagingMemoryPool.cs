@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace Veldrid.OpenGL
 {
-    internal unsafe sealed class StagingMemoryPool : IDisposable
+    public unsafe sealed class StagingMemoryPool : IDisposable
     {
         private const uint MinimumCapacity = 128;
 
@@ -114,7 +114,7 @@ namespace Veldrid.OpenGL
         }
     }
 
-    internal unsafe struct StagingBlock
+    public unsafe struct StagingBlock
     {
         public readonly uint Id;
         public readonly void* Data;
