@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veldrid.Core", "Veldrid.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veldrid.D3D11", "Veldrid.D3D11\Veldrid.D3D11.csproj", "{62CFF648-7FAC-4DAD-A5DB-E61DEE1DD1B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veldrid.iOS", "Veldrid.iOS\Veldrid.iOS.csproj", "{A53953D6-D00B-4709-A792-29DD2FA01E08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{62CFF648-7FAC-4DAD-A5DB-E61DEE1DD1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62CFF648-7FAC-4DAD-A5DB-E61DEE1DD1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62CFF648-7FAC-4DAD-A5DB-E61DEE1DD1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A53953D6-D00B-4709-A792-29DD2FA01E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A53953D6-D00B-4709-A792-29DD2FA01E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A53953D6-D00B-4709-A792-29DD2FA01E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A53953D6-D00B-4709-A792-29DD2FA01E08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

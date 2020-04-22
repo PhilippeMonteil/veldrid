@@ -560,8 +560,8 @@ namespace Veldrid.MTL
             }
         }
 
-        internal override uint GetUniformBufferMinOffsetAlignmentCore() => MetalFeatures.IsMacOS ? 16u : 256u;
-        internal override uint GetStructuredBufferMinOffsetAlignmentCore() => 16u;
+        protected override uint GetUniformBufferMinOffsetAlignmentCore() => MetalFeatures.IsMacOS ? 16u : 256u;
+        protected override uint GetStructuredBufferMinOffsetAlignmentCore() => 16u;
     }
 
     internal sealed class MonoPInvokeCallbackAttribute : Attribute

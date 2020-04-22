@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A53953D6-D00B-4709-A792-29DD2FA01E08}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{a52b8a63-bc84-4b47-910d-692533484892}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Veldrid.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Veldrid.iOS</AssemblyName>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;EXCLUDE_D3D11_BACKEND;EXCLUDE_OPENGL_BACKEND;EXCLUDE_VULKAN_BACKEND</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;EXCLUDE_D3D11_BACKEND;EXCLUDE_OPENGL_BACKEND;EXCLUDE_VULKAN_BACKEND</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLBuffer.cs">
+      <Link>MTLBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLCommandList.cs">
+      <Link>MTLCommandList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLFeatureSupport.cs">
+      <Link>MTLFeatureSupport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLFence.cs">
+      <Link>MTLFence.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLFormats.cs">
+      <Link>MTLFormats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLFramebuffer.cs">
+      <Link>MTLFramebuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLFramebufferBase.cs">
+      <Link>MTLFramebufferBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLGraphicsDevice.cs">
+      <Link>MTLGraphicsDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLPipeline.cs">
+      <Link>MTLPipeline.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLPlaceholderTexture.cs">
+      <Link>MTLPlaceholderTexture.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLResourceFactory.cs">
+      <Link>MTLResourceFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLResourceLayout.cs">
+      <Link>MTLResourceLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLResourceSet.cs">
+      <Link>MTLResourceSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLSampler.cs">
+      <Link>MTLSampler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLShader.cs">
+      <Link>MTLShader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLSwapchain.cs">
+      <Link>MTLSwapchain.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLSwapchainFramebuffer.cs">
+      <Link>MTLSwapchainFramebuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLTexture.cs">
+      <Link>MTLTexture.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLTextureView.cs">
+      <Link>MTLTextureView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\Veldrid\MTL\MTLUnalignedBufferCopyInfo.cs">
+      <Link>MTLUnalignedBufferCopyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Veldrid.Core\Veldrid.Core.csproj">
+      <Project>{1385b687-f987-45a3-983a-526211ccaf80}</Project>
+      <Name>Veldrid.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\..\src\Veldrid\MTL\EmbeddedShaders\MTL_UnalignedBufferCopy_iOS.metallib">
+      <Link>EmbeddedShaders\MTL_UnalignedBufferCopy_iOS.metallib</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\src\Veldrid\MTL\EmbeddedShaders\MTL_UnalignedBufferCopy_macOS.metallib">
+      <Link>EmbeddedShaders\MTL_UnalignedBufferCopy_macOS.metallib</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\src\Veldrid\MTL\EmbeddedShaders\UnalignedBufferCopy.metal">
+      <Link>EmbeddedShaders\UnalignedBufferCopy.metal</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NativeLibraryLoader">
+      <Version>1.0.12</Version>
+    </PackageReference>
+    <PackageReference Include="Veldrid.MetalBindings">
+      <Version>4.7.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

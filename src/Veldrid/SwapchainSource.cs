@@ -137,7 +137,7 @@ namespace Veldrid
         }
     }
 
-    internal class NSWindowSwapchainSource : SwapchainSource
+    public class NSWindowSwapchainSource : SwapchainSource
     {
         public IntPtr NSWindow { get; }
 
@@ -147,7 +147,7 @@ namespace Veldrid
         }
     }
 
-    internal class UIViewSwapchainSource : SwapchainSource
+    public class UIViewSwapchainSource : SwapchainSource
     {
         public IntPtr UIView { get; }
 
@@ -157,7 +157,7 @@ namespace Veldrid
         }
     }
 
-    internal class AndroidSurfaceSwapchainSource : SwapchainSource
+    public class AndroidSurfaceSwapchainSource : SwapchainSource
     {
         public IntPtr Surface { get; }
         public IntPtr JniEnv { get; }
@@ -169,7 +169,7 @@ namespace Veldrid
         }
     }
 
-    internal class NSViewSwapchainSource : SwapchainSource
+    public class NSViewSwapchainSource : SwapchainSource
     {
         public IntPtr NSView { get; }
 
