@@ -12,7 +12,7 @@ using Android.Widget;
 
 using Veldrid;
 
-namespace Veldrid.Android
+namespace Veldrid.OpenGL
 {
 
     public static class GraphicsDeviceFactory
