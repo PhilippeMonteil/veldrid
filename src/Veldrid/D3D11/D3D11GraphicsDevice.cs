@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace Veldrid.D3D11
 {
-    internal class D3D11GraphicsDevice : GraphicsDevice
+    public class D3D11GraphicsDevice : GraphicsDevice
     {
         private readonly SharpDX.DXGI.Adapter _dxgiAdapter;
         private readonly SharpDX.Direct3D11.Device _device;
